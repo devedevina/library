@@ -1,0 +1,229 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--white);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.dashboard-header h1 {
+  color: var(--white);
+  font-size: var(--font-size-xl);
+  margin: 0;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.dashboard-card {
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.dashboard-card:hover {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.dashboard-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+}
+
+.card-content {
+  min-height: 150px;
+}
+
+.loan-list,
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.loan-item,
+.reservation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background: var(--light-gray);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.loan-info,
+.reservation-info {
+  flex: 1;
+}
+
+.loan-title,
+.reservation-title {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.loan-date,
+.reservation-date {
+  font-size: var(--font-size-sm);
+  color: var(--medium-gray);
+  margin: 0;
+}
+
+.loan-status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.loan-status.loaned {
+  background-color: #ffe5b4;
+  color: #8b4513;
+}
+
+.loan-status.returned {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.reservation-position {
+  font-weight: 600;
+  color: var(--danger-color);
+  font-size: var(--font-size-sm);
+}
+
+.empty-message {
+  text-align: center;
+  color: var(--medium-gray);
+  padding: var(--spacing-lg) 0;
+  font-size: var(--font-size-sm);
+}
+
+.top-books {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.top-book-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+.rank {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--secondary-color);
+  min-width: 30px;
+  text-align: center;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-title {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.book-author {
+  font-size: var(--font-size-sm);
+  color: var(--medium-gray);
+  margin: 0;
+}
+
+.rating {
+  font-weight: 600;
+  color: #f39c12;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  background: var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--medium-gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.dashboard-footer {
+  margin-top: var(--spacing-xl);
+}
+
+.info-box {
+  background: var(--light-gray);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  border-left: 4px solid var(--secondary-color);
+}
+
+.info-box h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.info-box li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
