@@ -20,13 +20,13 @@
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: var(--spacing-lg);
 }
 
 .dashboard-card {
   background: var(--white);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-2xl);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow);
   transition: var(--transition);
@@ -43,7 +43,7 @@
 }
 
 .card-content {
-  min-height: 150px;
+  min-height: 200px;
 }
 
 .loan-list,
@@ -58,7 +58,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   background: var(--light-gray);
   border-radius: var(--border-radius);
   border-left: 4px solid var(--secondary-color);
@@ -74,6 +74,7 @@
   font-weight: 600;
   color: var(--primary-color);
   margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-size-base);
 }
 
 .loan-date,
@@ -122,8 +123,8 @@
 .top-book-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md);
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
   background: var(--light-gray);
   border-radius: var(--border-radius);
 }
@@ -144,6 +145,7 @@
   font-weight: 600;
   color: var(--primary-color);
   margin: 0 0 var(--spacing-xs) 0;
+  font-size: var(--font-size-base);
 }
 
 .book-author {
@@ -167,7 +169,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-lg);
   background: var(--light-gray);
   border-radius: var(--border-radius);
 }
@@ -179,7 +181,7 @@
 }
 
 .stat-value {
-  font-size: var(--font-size-xl);
+  font-size: 2rem;
   font-weight: 700;
   color: var(--secondary-color);
 }
